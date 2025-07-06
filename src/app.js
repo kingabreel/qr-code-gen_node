@@ -1,5 +1,6 @@
 import prompt from 'prompt';
 import { mainPrompt } from './prompt/prompt-main.js';
+import { generateQRCode } from './service/qr-code-generator.js';
 
 async function main() {
     prompt.get(mainPrompt, async (err, result) => {
@@ -12,7 +13,7 @@ async function main() {
 
         switch (selection) {
             case '1':
-                console.log('You selected QR code generation.');
+                generateQRCode();
                 break;
             case '2':
                 console.log('You selected password generation.');
