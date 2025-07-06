@@ -10,9 +10,6 @@ async function handle(err, result) {
     const { link, type } = result;
 
     try {
-
-        let qrCodeData;
-
         if (type === '1') {
             qr.generate(result.link, { small: true }, (qrCode) => {
                 console.log(chalk.green("QR Code generated successfully in terminal!\n"));
